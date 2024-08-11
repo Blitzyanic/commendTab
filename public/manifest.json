@@ -4,6 +4,6 @@
   "description": "another minimal newtab",
   "version": "1.0",
   "chrome_url_overrides": {
-    "newtab": "chrome-extension://your-extension-id/newtab.html"
+    "newtab": "index.html"
   }
 }
