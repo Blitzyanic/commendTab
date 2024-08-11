@@ -40,7 +40,7 @@ function Clock() {
   }, []);
 
   return (
-    <div>
+    <div className="cursor-default select-none">
       <p className="clockFont">{currentTime}</p>
       <p className="flex justify-center clockDateFont">{currentDate}</p>
     </div>
