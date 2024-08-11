@@ -1,7 +1,9 @@
 import {useEffect, useState} from "react";
+import "./Clock.css"
 
 function getCurrentTime(): string {
   const date: Date = new Date();
+
   const hours: number = date.getHours();
   const minutes: number = date.getMinutes();
 
@@ -12,20 +14,35 @@ function getCurrentTime(): string {
   return paddedHours + ":" + paddedMinutes;
 }
 
+function getCurrentDate() {
+  const date: Date = new Date();
+
+  const day = date.getDate();
+  const month: number = date.getMonth()+1;
+  const year: number = date.getFullYear();
+
+  const paddedDay: string = day < 10 ? '0' + day : day.toString();
+  const paddedMonth: string = month < 10 ? '0' + month : month.toString();
+
+  return(paddedDay+" "+paddedMonth+" "+year);
+}
 
 function Clock() {
   const [currentTime, setCurrentTime] = useState(getCurrentTime());
+  const [currentDate, setCurrentDate] = useState(getCurrentDate());
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const interval: number = setInterval(() => {
       setCurrentTime(getCurrentTime());
+      setCurrentDate(getCurrentDate());
     }, 1000); // update every second
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div>
-      <p>{currentTime}</p>
+      <p className="clockFont">{currentTime}</p>
+      <p className="flex justify-center clockDateFont">{currentDate}</p>
     </div>
   );
 }
