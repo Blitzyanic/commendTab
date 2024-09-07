@@ -24,7 +24,7 @@ function getCurrentDate() {
   const paddedDay: string = day < 10 ? '0' + day : day.toString();
   const paddedMonth: string = month < 10 ? '0' + month : month.toString();
 
-  return(paddedDay+" "+paddedMonth+" "+year);
+  return(paddedDay+"."+paddedMonth+"."+year);
 }
 
 function Clock() {
