@@ -4,6 +4,9 @@
 
 :root {
   color: rgba(255, 255, 255, 0.87);
-  background-image: url("assets/img/city.gif");
+
+  background-image: url("assets/img/black_hole_by_kurzgesagt.png");
+  background-size: cover;
+  background-position: center;
 }
 
