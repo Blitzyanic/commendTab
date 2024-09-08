@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Outfit';
-    src: local("Outfit-Bold"), url("../../../public/font/Outfit-Bold.ttf") format("opentype");
+    src: local("Outfit-Bold"), url("/font/Outfit-Bold.ttf") format("opentype");
 }
 
 @font-face {
     font-family: 'OutfitReg';
-    src: local("Outfit-Regular"), url("../../../public/font/Outfit-Regular.ttf") format("opentype");
+    src: local("Outfit-Regular"), url("/font/Outfit-Regular.ttf") format("opentype");
 }
 
 .clockFont {

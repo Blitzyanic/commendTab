@@ -1,4 +1,5 @@
 import "./search.css";
+import data from "./shortcuts.json";
 
 let sendTo = (url: string) => { window.location.replace(url) };
 
@@ -7,17 +8,14 @@ function Search() {
     if (event.key === "Enter") {
       let inp = document.getElementById("search-input") as HTMLInputElement;
 
-      if (inp.value.charAt(0) === "!") {
-        commend(inp.value.substring(1));
-      } else {
-        searchBrave(inp.value);
-      }
+      commend(inp.value);      
     }
   })
 
   return (
     <div className="mt-52 flex justify-center">
       <input type="text"
+             autoComplete="false"
              id="search-input"
              className="search absolute rounded-md p-1 w-80 h-10 selection:bg-violet-700/40 selection:text-fuchsia-200"
              autoFocus={true}
@@ -26,24 +24,24 @@ function Search() {
   )
 }
 
-function searchBrave(question: string) {
-  sendTo("https://search.brave.com/search?q="+question);
-}
 
 function commend(args: string) {
-  switch (args) {
-    case "yt":
-      sendTo("https://www.youtube.com/");
+  switch (args.charAt(0)) {
+    case "!":
+      shortcuts(args);
       break;
-    case "gh":
-      sendTo("https://github.com/");
+
+    default:
+      sendTo("https://search.brave.com/search?q="+args);
       break;
-    case "1d20":
-      sendTo("https://app.roll20.net/");
-      break;
-    case "wh":
-      sendTo("https://web.whatsapp.com/");
-      break;
+  }
+}
+
+function shortcuts(prefix: string) {
+  if (prefix in data) {
+    // @ts-ignore
+    const url = data[prefix];
+    sendTo(url);
   }
 }
 
