@@ -31,8 +31,19 @@ function searchBrave(question: string) {
 }
 
 function commend(args: string) {
-  if (args === "yt") {
-    sendTo("https://www.youtube.com");
+  switch (args) {
+    case "yt":
+      sendTo("https://www.youtube.com/");
+      break;
+    case "gh":
+      sendTo("https://github.com/");
+      break;
+    case "1d20":
+      sendTo("https://app.roll20.net/");
+      break;
+    case "wh":
+      sendTo("https://web.whatsapp.com/");
+      break;
   }
 }
 
