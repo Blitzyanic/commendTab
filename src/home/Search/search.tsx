@@ -1,11 +1,14 @@
-import "./search.css"
+import "./search.css";
 
 function Search() {
-    return (
-        <span className="flex justify-center mt-52 bg rounded">
-            <p>Search</p>
-        </span>
-    );
+  return (
+    <div className="flex justify-center mt-52">
+      <input type="text"
+             className="search absolute rounded-md p-1"
+             autoFocus={true}
+      />
+    </div>
+  );
 }
 
 export default Search;
