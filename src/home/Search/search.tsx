@@ -17,7 +17,7 @@ function Search() {
       <input type="text"
              autoComplete="false"
              id="search-input"
-             className="search absolute rounded-md p-1 w-80 h-10 selection:bg-violet-700/40 selection:text-fuchsia-200"
+             className="search text-lg absolute rounded-md p-1 w-80 h-10 selection:bg-violet-700/40 selection:text-fuchsia-200"
              autoFocus={true}
       />
     </div>
