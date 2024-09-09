@@ -1,5 +1,5 @@
 import "./search.css";
-import data from "./shortcuts.json";
+import {data} from "./shortcuts.ts";
 
 let sendTo = (url: string) => { window.location.replace(url) };
 
@@ -25,6 +25,7 @@ function Search() {
 }
 
 
+
 function commend(args: string) {
   switch (args.charAt(0)) {
     case "!":
@@ -39,7 +40,6 @@ function commend(args: string) {
 
 function shortcuts(prefix: string) {
   if (prefix in data) {
-    // @ts-ignore
     const url = data[prefix];
     sendTo(url);
   }
