@@ -9,5 +9,5 @@
 - [ ] localhost port prefix
 - [ ] add shortcut json for im/export
 - [ ] add blur dis/enable option
-
+<br>
 - [ ] _FIX_ blur wallpaper on resized window
