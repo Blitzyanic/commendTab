@@ -1,12 +1,12 @@
 import "./search.css";
 import {data} from "./shortcuts.ts";
 
-let sendTo = (url: string) => { window.location.replace(url) };
+const sendTo = (url: string) => { window.location.replace(url) };
 
 function Search() {
   window.addEventListener("keyup", function (event: KeyboardEvent) {
     if (event.key === "Enter") {
-      let inp = document.getElementById("search-input") as HTMLInputElement;
+      const inp = document.getElementById("search-input") as HTMLInputElement;
 
       commend(inp.value);      
     }
@@ -32,17 +32,25 @@ function commend(args: string) {
       shortcuts(args);
       break;
 
+    case ":":
+      localhostPort(args);
+      break;
+
     default:
       sendTo("https://search.brave.com/search?q="+args);
       break;
   }
 }
 
-function shortcuts(prefix: string) {
-  if (prefix in data) {
-    const url = data[prefix];
+function shortcuts(args: string) {
+  if (args in data) {
+    const url = data[args];
     sendTo(url);
   }
+}
+
+function localhostPort(args: string) {
+  sendTo("http://localhost:"+args.substring(1));
 }
 
 export default Search;
