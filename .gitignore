@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# prevent pushing own shortcuts
+src/home/Search/shortcuts.ts
