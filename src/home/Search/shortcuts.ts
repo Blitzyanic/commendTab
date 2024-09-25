@@ -5,5 +5,8 @@ interface IShortcut {
 export const data: IShortcut =  {
     "!yt": "https://youtube.com",
     "!gh": "https://github.com",
-    "!1d20": "https://roll20.net/"
+    "!zeit": "https://portal.sulzer.de/zeit/",
+    "!git": "https://git.sulzer.de/",
+    "!duck": "https://ente.sulzer.de/",
+    "!sulzer": "https://sulzerde.sharepoint.com/"
 }
