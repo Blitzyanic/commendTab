@@ -7,8 +7,9 @@
 - [ ] !help command (show all)
 - [ ] autofocus to input
 - [x] localhost port prefix
-- [ ] add shortcut json for im/export
+- [x] add shortcut json for im/export
 - [ ] add blur dis/enable option
+- [ ] add export from settings as json
 <br>
 
 - [ ] _FIX_ blur wallpaper on resized window
