@@ -2,8 +2,11 @@ interface IShortcut {
     [key: string]: string;
 }
 
-export const data: IShortcut =  {
-    "!yt": "https://youtube.com",
-    "!gh": "https://github.com",
-    "!1d20": "https://roll20.net/"
-}
+export let data: IShortcut = {};
+
+fetch('/shortcuts.json')
+    .then(response => response.json())
+    .then((jsonData: IShortcut): void => {
+        data = jsonData;
+    })
+    .catch(error => console.error('Error loading shortcuts:', error));
