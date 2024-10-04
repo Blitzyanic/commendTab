@@ -5,7 +5,7 @@
 - [ ] autocomplete for commends
 - [ ] commandLine Popup for browser
 - [ ] !help command (show all)
-~~- [ ] autofocus to input~~ // TODO: check if possible
+- ~~[ ] autofocus to input~~ // TODO: check if possible
 - [x] localhost port prefix
 - [x] add shortcut json for im/export
 - [ ] add blur dis/enable option
