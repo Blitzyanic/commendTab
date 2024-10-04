@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import "./Clock.css"
+import "./clock.css"
 
 function getCurrentTime(): string {
   const date: Date = new Date();

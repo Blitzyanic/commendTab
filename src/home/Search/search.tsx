@@ -1,7 +1,5 @@
 import "./search.css";
-import {data} from "./shortcuts.ts";
-
-const sendTo = (url: string) => { window.location.replace(url) };
+import { commend } from "../../commend/commend.ts";
 
 function Search() {
   window.addEventListener("keyup", function (event: KeyboardEvent) {
@@ -22,35 +20,6 @@ function Search() {
       />
     </div>
   )
-}
-
-
-
-function commend(args: string) {
-  switch (args.charAt(0)) {
-    case "!":
-      shortcuts(args);
-      break;
-
-    case ":":
-      localhostPort(args);
-      break;
-
-    default:
-      sendTo("https://search.brave.com/search?q="+args);
-      break;
-  }
-}
-
-function shortcuts(args: string) {
-  if (args in data) {
-    const url = data[args];
-    sendTo(url);
-  }
-}
-
-function localhostPort(args: string) {
-  sendTo("http://localhost:"+args.substring(1));
 }
 
 export default Search;
