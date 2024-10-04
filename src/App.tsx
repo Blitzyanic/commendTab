@@ -1,4 +1,4 @@
-import Clock from "./home/clock/clock.tsx";
+import Clock from "./home/Clock/clock.tsx";
 import Search from "./home/Search/search.tsx";
 
 function App() {

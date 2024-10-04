@@ -12,6 +12,10 @@ export function commend(args: string) {
       localhostPort(args);
       break;
 
+    case "/":
+      config(args);
+      break;
+
     default:
       sendTo("https://search.brave.com/search?q="+args);
       break;
@@ -27,4 +31,8 @@ function shortcuts(args: string) {
 
 function localhostPort(args: string) {
   sendTo("http://localhost:"+args.substring(1));
+}
+
+function config(args: string) {
+  console.log(args);
 }
