@@ -10,6 +10,7 @@
 - [x] add shortcut json for im/export
 - [ ] add blur dis/enable option
 - [ ] add export from settings as json
+- [ ] add firefox support
 <br>
 
 - [ ] _FIX_ blur wallpaper on resized window
